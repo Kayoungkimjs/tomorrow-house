@@ -1,3 +1,4 @@
+@import './constants/colors'; //변수와 관련된 선언은 최상위로.. 하단에서 사용할 수 있음
 @import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
