@@ -1,0 +1,84 @@
+%button-base {
+  @include inline-flexbox;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 700;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+// button 3가지 변주 - styles, sizes, states
+// style 관련 선언은 style 외 다른 부분은 고려하지 않는다.
+// button 김이박 : fill, outlined, ghost
+
+// NOTE: button styles
+.btn-primary {
+  @extend %button-base;
+  color: $white;
+  background-color: $blue;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $blue-dark;
+  }
+}
+
+.btn-secondary {
+  @extend %button-base;
+  color: $primary;
+  background-color: $border;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $tertiary;
+  }
+}
+
+.btn-outlined {
+  @extend %button-base;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $blue-light;
+  }
+}
+
+.btn-ghost {
+  @extend %button-base;
+  color: $primary;
+  background-color: transparent;
+  transition: color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: $secondary;
+  }
+}
+
+// NOTE: button size
+// width 값은 선언하지 않는다. height 기준. 텍스트 내용에 따라 가변하기 때문!
+
+.btn-32 {
+  @include text-style(14);
+  height: 32px;
+}
+
+.btn-40 {
+  @include text-style(16);
+  height: 40px;
+}
+
+.btn-48 {
+  @include text-style(16);
+  height: 48px;
+}
+
+.btn-55 {
+  @include text-style(18);
+  height: 55px;
+}
