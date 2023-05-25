@@ -62,7 +62,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
     }
   }
 
-  @media screen and (min-width: $md-brekpoint) {
+  @media screen and (min-width: $md-breakpoint) {
     .container {
       max-width: $md-max-container;
       padding: 0 $md-margin;
@@ -75,7 +75,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
     }
   }
 
-  @media screen and (min-width: $lg-brekpoint) {
+  @media screen and (min-width: $lg-breakpoint) {
     .container {
       max-width: $lg-max-container;
       padding: 0;
