@@ -8,7 +8,7 @@ $flex-map: (
 );
 
 @function _get-flex-value($key) {
-  @return map-get($flexmap, $key); //map, map-get sass 내장함수
+  @return map-get($flex-map, $key); //map, map-get sass 내장함수
 }
 
 @mixin flexbox($jc: center, $ai: center) {
