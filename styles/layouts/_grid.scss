@@ -48,41 +48,83 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
     flex-wrap: wrap;
   }
 
-  //.col-sm-1 .com-md-2 ...
   [class^='col-'] {
-    padding: 0 $gutter/2;
+    padding: 0 $gutter / 2;
   }
 
   @for $i from 1 through $sm-columns {
-    // @debug $i;
     .col-sm-#{$i} {
-      width: percentage($i / $sm-columns); //* 100%;
+      width: percentage($i / $sm-columns);
     }
   }
 
   @include responsive(T) {
-    .container {
-      max-width: $md-max-container;
-      padding: 0 $md-margin;
+    max-width: $md-max-container;
+    padding: 0 $md-margin;
 
-      @for $i from 1 through $md-columns {
-        .col-md-#{$i} {
-          width: percentage($i / $md-columns); //* 100%;
-        }
+    @for $i from 1 through $md-columns {
+      .col-md-#{$i} {
+        width: percentage($i / $md-columns);
       }
     }
   }
 
   @include responsive(D) {
-    .container {
-      max-width: $lg-max-container;
-      padding: 0;
+    max-width: $lg-max-container;
+    padding: 0;
 
-      @for $i from 1 through $md-columns {
-        .col-lg-#{$i} {
-          width: ($lg-unit + $gutter) * $i;
-        }
+    @for $i from 1 through $lg-columns {
+      .col-lg-#{$i} {
+        width: ($lg-unit + $gutter) * $i;
       }
     }
   }
 }
+// .container {
+//   width: 100%;
+//   padding: 0 $sm-margin;
+//   margin: 0 auto;
+
+//   .row {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   //.col-sm-1 .com-md-2 ...
+//   [class^='col-'] {
+//     padding: 0 $gutter/2;
+//   }
+
+//   @for $i from 1 through $sm-columns {
+//     // @debug $i;
+//     .col-sm-#{$i} {
+//       width: percentage($i / $sm-columns); //* 100%;
+//     }
+//   }
+
+//   @include responsive(T) {
+//     .container {
+//       max-width: $md-max-container;
+//       padding: 0 $md-margin;
+
+//       @for $i from 1 through $md-columns {
+//         .col-md-#{$i} {
+//           width: percentage($i / $md-columns); //* 100%;
+//         }
+//       }
+//     }
+//   }
+
+//   @include responsive(D) {
+//     .container {
+//       max-width: $lg-max-container;
+//       padding: 0;
+
+//       @for $i from 1 through $md-columns {
+//         .col-lg-#{$i} {
+//           width: ($lg-unit + $gutter) * $i;
+//         }
+//       }
+//     }
+//   }
+// }
