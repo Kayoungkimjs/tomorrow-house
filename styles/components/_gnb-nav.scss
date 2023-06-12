@@ -1,9 +1,21 @@
 .gnb-nav {
+  $padding: 8px;
+
   &-list {
     @include flexbox(start);
+    position: relative;
+    right: $padding;
   }
+
   &-item {
-    margin-right: 24px;
+    margin-right: 24px - ($padding * 2);
+
+    &.is-active,
+    &:hover {
+      a {
+        color: $blue; //a 태그에 폰트스타일을 주고 있기 때문에 a에 줄 것
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -11,6 +23,8 @@
 
     a {
       @include text-style(18, $primary);
+      display: block;
+      padding: $padding;
       font-weight: 700;
     }
   }
