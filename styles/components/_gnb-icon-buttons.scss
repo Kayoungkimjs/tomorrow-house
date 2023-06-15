@@ -1,10 +1,14 @@
 .gnb-icon-button {
+  $badge-size: 16px;
+
   @include flexbox;
+  position: relative;
   width: 32px;
   height: 32px;
   font-size: 24px;
   color: $secondary;
-  transition: color 200ms ease-in-out;
+  border-radius: 50%;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 
   &.is-menu {
     color: $blue;
@@ -14,7 +18,37 @@
     }
   }
 
+  &.is-cart {
+    position: relative;
+    top: 1px;
+    right: 1px;
+  }
+
   &:active {
     color: $primary;
+  }
+
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 0 4px;
+    min-width: $badge-size;
+    height: $badge-size;
+    border-radius: $badge-size / 2; //적당히 10000px 큰숫자 주면됨
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: $white;
+    background-color: $red;
+  }
+
+  @include responsive(T) {
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
   }
 }
