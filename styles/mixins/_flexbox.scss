@@ -8,10 +8,15 @@ $flex-map: (
 );
 
 @function _get-flex-value($key) {
-  @return map-get($flex-map, $key); //map, map-get sass 내장함수
+  //@function은 특정 값을 반환
+  @return map-get(
+    $flex-map,
+    $key
+  ); //map, map-get sass 내장함수 (가져올 곳, 가져올 value)
 }
 
 @mixin flexbox($jc: center, $ai: center) {
+  //jc: justify-content, ai: align-items
   display: flex;
   align-items: _get-flex-value($ai);
   justify-content: _get-flex-value($jc);

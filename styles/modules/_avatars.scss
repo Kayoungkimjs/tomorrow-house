@@ -1,5 +1,5 @@
 %avatar-base {
-  display: block; //a 등 다른 태그일 수 있으니까
+  display: block; //a 등 inline 요소일 수 있으니까 안전하게!
   overflow: hidden;
   border-radius: 50%;
 

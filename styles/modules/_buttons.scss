@@ -14,7 +14,7 @@
 // style 관련 선언은 style 외 다른 부분은 고려하지 않는다.
 // button 김이박 : fill, outlined, ghost
 
-// NOTE: button styles
+// NOTE: button styles & states
 .btn-primary {
   @extend %button-base;
   color: $white;
@@ -22,6 +22,7 @@
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
+    // disabled가 아닌 hover
     background-color: $blue-dark;
   }
 }

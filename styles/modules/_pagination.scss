@@ -16,7 +16,7 @@
     &.page-prev {
       margin-right: 24px;
       .ic-chevron {
-        transform: rotate(90deg);
+        transform: rotate(90deg); //시계방향 +, 반대방향 -
       }
     }
 

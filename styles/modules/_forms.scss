@@ -11,7 +11,7 @@
   transition: background-color 200ms ease-in-out;
 
   &::placeholder {
-    // 속성 제한되어있음
+    // form안에 placeholder 적용. but, 속성 제한되어있음
     color: $tertiary;
   }
 
@@ -50,11 +50,11 @@
   }
 
   .ic-caret {
-    @include pos-center-y;
+    @include pos-center-y; //y축으로 center일 경우 적용
     right: 8px;
     font-size: 24px;
     color: $tertiary;
-    pointer-events: none;
+    pointer-events: none; // absolute로 relative를 덮어버려서 아이콘을 누른 것으로 인식, select가 나오지 않음. 이를 막기 위함 (클릭 이벤트와 관계 없음)
   }
 }
 

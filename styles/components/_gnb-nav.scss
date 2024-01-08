@@ -24,7 +24,7 @@
     a {
       @include text-style(18, $primary);
       display: block;
-      padding: $padding;
+      padding: $padding; // anchor 영역 확대
       font-weight: 700;
     }
   }
