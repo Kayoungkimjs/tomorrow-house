@@ -15,7 +15,7 @@
 * container-size ········ 100% - (30px * 2)
 * max-container-size ···· 960px
 *
-* DESKTOP (>= 768px) -------------------------------------
+* DESKTOP (>= 1200px) -------------------------------------
 * fixture ··············· lg
 * # of columns ·········· 12
 * gutter ················ 20px
@@ -32,11 +32,11 @@ $sm-margin: 5px;
 
 $md-columns: 12;
 $md-margin: 30px;
-$md-max-container: 960px + $md-margin * 2;
+$md-max-container: 960px + $md-margin * 2; // 양 옆 패딩으로 잃었던 부분
 
 $lg-columns: 12;
 $lg-unit: 75px;
-$lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
+$lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px 재사용성을 위함
 
 .container {
   width: 100%;
@@ -49,12 +49,13 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
   }
 
   [class^='col-'] {
-    padding: 0 $gutter / 2;
+    padding: 0 calc($gutter / 2);
   }
 
   @for $i from 1 through $sm-columns {
     .col-sm-#{$i} {
-      width: percentage($i / $sm-columns);
+      width: calc($i / $sm-columns * 100%);
+      // width: percentage($i / $sm-columns);
     }
   }
 
@@ -64,7 +65,8 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
 
     @for $i from 1 through $md-columns {
       .col-md-#{$i} {
-        width: percentage($i / $md-columns);
+        width: calc($i / $md-columns * 100%);
+        // width: percentage($i / $md-columns);
       }
     }
   }
@@ -80,51 +82,3 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns; //1140px
     }
   }
 }
-// .container {
-//   width: 100%;
-//   padding: 0 $sm-margin;
-//   margin: 0 auto;
-
-//   .row {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-
-//   //.col-sm-1 .com-md-2 ...
-//   [class^='col-'] {
-//     padding: 0 $gutter/2;
-//   }
-
-//   @for $i from 1 through $sm-columns {
-//     // @debug $i;
-//     .col-sm-#{$i} {
-//       width: percentage($i / $sm-columns); //* 100%;
-//     }
-//   }
-
-//   @include responsive(T) {
-//     .container {
-//       max-width: $md-max-container;
-//       padding: 0 $md-margin;
-
-//       @for $i from 1 through $md-columns {
-//         .col-md-#{$i} {
-//           width: percentage($i / $md-columns); //* 100%;
-//         }
-//       }
-//     }
-//   }
-
-//   @include responsive(D) {
-//     .container {
-//       max-width: $lg-max-container;
-//       padding: 0;
-
-//       @for $i from 1 through $md-columns {
-//         .col-lg-#{$i} {
-//           width: ($lg-unit + $gutter) * $i;
-//         }
-//       }
-//     }
-//   }
-// }
