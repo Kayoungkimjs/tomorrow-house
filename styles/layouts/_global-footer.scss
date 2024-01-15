@@ -1,0 +1,73 @@
+.global-footer {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  background-color: $background;
+
+  &-title {
+    @include text-style(13, $dark);
+    font-weight: 700;
+
+    .ic-chevron {
+      display: inline-block; //inline에서는 transform 쓸 수 없음
+      font-size: 12;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-contact {
+    @include text-style(24, $dark);
+    font-weight: 700;
+  }
+
+  &-time {
+    @include text-style(12, $primary);
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  &-detail-list {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: $secondary;
+  }
+
+  &-detail-item {
+    @include flexbox(start);
+
+    address {
+      display: inline;
+    }
+
+    dt::after {
+      margin: 0 2px;
+      content: ':';
+    }
+  }
+
+  @include responsive(D) {
+    &-title {
+      @include text-style(14);
+      font-weight: 700;
+    }
+
+    &-contact:hover {
+      opacity: 0.5;
+    }
+
+    &-detail-list {
+      @include inline-flexbox(start);
+    }
+
+    &-detail-item {
+      a:hover {
+        text-decoration: underline;
+      }
+
+      &:not(:last-child):after {
+        margin: 0 8px;
+        content: '|';
+      }
+    }
+  }
+}
