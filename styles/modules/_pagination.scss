@@ -16,7 +16,7 @@
     &.page-prev {
       margin-right: 24px;
       .ic-chevron {
-        transform: rotate(90deg); //시계방향 +, 반대방향 -
+        transform: rotate(90deg);
       }
     }
 
@@ -58,7 +58,7 @@
     a,
     button {
       @extend %page-item-base;
-      min-width: 26px; //숫자가 커질 경우 대비
+      min-width: 26px;
       padding: 0 4px;
 
       &:hover {
