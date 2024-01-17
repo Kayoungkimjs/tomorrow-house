@@ -13,7 +13,7 @@
     &.is-active,
     &:hover {
       a {
-        color: $blue; //a 태그에 폰트스타일을 주고 있기 때문에 a에 줄 것
+        color: $blue;
       }
     }
 
@@ -24,8 +24,9 @@
     a {
       @include text-style(18, $primary);
       display: block;
-      padding: $padding; // anchor 영역 확대
+      padding: $padding;
       font-weight: 700;
+      white-space: nowrap;
     }
   }
 }

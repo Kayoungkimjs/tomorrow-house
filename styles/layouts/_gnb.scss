@@ -1,10 +1,12 @@
 .gnb {
+  $padding: 8px;
   position: relative;
-  border: 1px solid $border;
+  border-bottom: 1px solid $border;
+  background-color: $white;
 
   &-wrapper {
     @include flexbox(between);
-    height: 50px;
+    height: $gnb-height-sm - 1px;
   }
 
   &-right {
@@ -39,7 +41,7 @@
 
   .logo {
     @include pos-center;
-
+    padding: $padding;
     a {
       display: block;
     }
@@ -52,6 +54,10 @@
   }
 
   @include responsive(T) {
+    &-wrapper {
+      height: $gnb-height-md - 1px;
+    }
+
     &-left {
       @include flexbox(start);
     }
@@ -69,9 +75,9 @@
     }
 
     .logo {
-      position: static;
-      margin-right: 32px;
-      transform: none;
+      position: static; //mobile absolute 해제
+      margin-right: 32px - ($padding * 2);
+      transform: none; //mobile transform 해제
 
       img {
         height: 24px;
@@ -87,13 +93,35 @@
   }
 
   @include responsive(D) {
-    &-right {
+    &-search {
+      width: 264px;
+      position: relative;
+      margin-right: 24px;
+
       .input-group {
-        width: 264px;
-        margin-right: 24px;
+        width: 100%;
       }
-      .button-group {
-        margin-left: 24px;
+
+      .search-history {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 8px);
+        padding: 16px 8px 8px;
+        border: 1px solid $border;
+        border-radius: 4px;
+        background-color: $white;
+        box-shadow: $dropdown-shadow;
+        display: none;
+
+        &.is-active {
+          display: block;
+        }
+
+        &-header {
+          padding: 0 8px;
+          margin-top: 0;
+        }
       }
     }
   }
