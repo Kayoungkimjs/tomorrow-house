@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Kayoungkimjs/tomorrow-house#readme",
   "dependencies": {
-    "node-sass": "^8.0.0"
+    "node-sass": "^8.0.0",
+    "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
     "stylelint": "^15.7.0",
