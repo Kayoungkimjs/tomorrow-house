@@ -67,9 +67,11 @@
     font-size: 14px;
     line-height: -0.01em;
     text-decoration: line-through;
+    font-weight: 400;
   }
 
   .currency {
     @include text-style(14);
+    font-weight: 400;
   }
 }
