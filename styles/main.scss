@@ -15,6 +15,7 @@
 @import './mixins/positions';
 @import './mixins/flexbox';
 @import './mixins/scrollbar';
+@import './mixins/star-rating';
 
 @import './modules/tags';
 @import './modules/avatars';
@@ -32,6 +33,10 @@
 @import './components/search-history';
 @import './components/breadcrumb';
 @import './components/product-carousel';
+@import './components/product-info';
+@import './components/order-form';
+@import './components/checkout-card';
+@import './components/product-section-header';
 
 @import './layouts/grid';
 @import './layouts/gnb';
