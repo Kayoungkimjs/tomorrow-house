@@ -1,6 +1,4 @@
 .product-tab {
-  $grid-margin: $sm-margin + $gutter / 2;
-
   position: sticky;
   top: $gnb-height-sm + $lnb-height-sm;
   width: 100%;
@@ -15,7 +13,7 @@
   }
 
   &-item {
-    width: (100% / 5);
+    width: calc(100% / 5);
 
     &.is-active {
       button {
