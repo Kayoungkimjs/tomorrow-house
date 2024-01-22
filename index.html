@@ -697,10 +697,11 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="product-section-divider sm-only" aria-hidden />
             </section>
-            <div class="product-section-divider sm-only" aria-hidden />
+
             <section
-              class="product-section product-review is-open"
+              class="product-section product-review"
               id="product-review"
               role="tabpanel"
             >
@@ -716,72 +717,127 @@
                     <strong class="average-score" arai-label="평점 4.8"
                       >4.8</strong
                     >
+
+                    <div class="star-rating">
+                      <i class="ic-star is-active"></i>
+                      <i class="ic-star"></i>
+                      <i class="ic-star"></i>
+                      <i class="ic-star"></i>
+                      <i class="ic-star"></i>
+                    </div>
                   </div>
-                  <div class="star-rating">
-                    <i class="ic-star is-active"></i>
-                    <i class="ic-star"></i>
-                    <i class="ic-star"></i>
-                    <i class="ic-star"></i>
-                    <i class="ic-star"></i>
+
+                  <div class="score-detail">
+                    <dl class="score-stats-list">
+                      <div class="score-stats-item is-active">
+                        <dt>5점</dt>
+                        <dd>
+                          <div class="bar-graph" arai-hidden>
+                            <div class="active-bar"></div>
+                          </div>
+                          <strong class="count" aria-label="467개">467</strong>
+                        </dd>
+                      </div>
+
+                      <div class="score-stats-item">
+                        <dt>4점</dt>
+                        <dd>
+                          <div class="bar-graph" arai-hidden>
+                            <div class="active-bar"></div>
+                          </div>
+                          <strong class="count" aria-label="87개">87</strong>
+                        </dd>
+                      </div>
+
+                      <div class="score-stats-item">
+                        <dt>3점</dt>
+                        <dd>
+                          <div class="bar-graph" arai-hidden>
+                            <div class="active-bar"></div>
+                          </div>
+                          <strong class="count" aria-label="13개">13</strong>
+                        </dd>
+                      </div>
+
+                      <div class="score-stats-item">
+                        <dt>2점</dt>
+                        <dd>
+                          <div class="bar-graph" arai-hidden>
+                            <div class="active-bar"></div>
+                          </div>
+                          <strong class="count" aria-label="0개">0</strong>
+                        </dd>
+                      </div>
+
+                      <div class="score-stats-item">
+                        <dt>1점</dt>
+                        <dd>
+                          <div class="bar-graph" arai-hidden>
+                            <div class="active-bar"></div>
+                          </div>
+                          <strong class="count" aria-label="0개">0</strong>
+                        </dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
 
-                <div class="score-detail">
-                  <dl class="score-stats-list">
-                    <div class="score-stats-item is-active">
-                      <dt>5점</dt>
-                      <dd>
-                        <div class="bar-graph" arai-hidden>
-                          <div class="active-bar"></div>
-                        </div>
-                        <strong class="count" aria-label="467개">467</strong>
-                      </dd>
-                    </div>
+                <ol class="review-list">
+                  <li class="review-item">
+                    <article class="review-card">
+                      <header class="review-card-header">
+                        <h3 class="visually-hidden">김버그 님이 작성한 리뷰</h3>
 
-                    <div class="score-stats-item">
-                      <dt>4점</dt>
-                      <dd>
-                        <div class="bar-graph" arai-hidden>
-                          <div class="active-bar"></div>
-                        </div>
-                        <strong class="count" aria-label="87개">87</strong>
-                      </dd>
-                    </div>
+                        <a class="avatar-24" href="/">
+                          <img
+                            src="assets/images/img-user-01.jpg"
+                            alt="김버그"
+                          />
+                        </a>
 
-                    <div class="score-stats-item">
-                      <dt>3점</dt>
-                      <dd>
-                        <div class="bar-graph" arai-hidden>
-                          <div class="active-bar"></div>
-                        </div>
-                        <strong class="count" aria-label="13개">13</strong>
-                      </dd>
-                    </div>
+                        <div class="info">
+                          <a href="/" class="username">
+                            <strong>김버그</strong>
+                          </a>
 
-                    <div class="score-stats-item">
-                      <dt>2점</dt>
-                      <dd>
-                        <div class="bar-graph" arai-hidden>
-                          <div class="active-bar"></div>
-                        </div>
-                        <strong class="count" aria-label="0개">0</strong>
-                      </dd>
-                    </div>
+                          <div class="detail">
+                            <div class="star-rating-13" aria-label="5점 / 5점">
+                              <i class="ic-star is-active"></i>
+                              <i class="ic-star is-active"></i>
+                              <i class="ic-star is-active"></i>
+                              <i class="ic-star is-active"></i>
+                              <i class="ic-star is-active"></i>
+                            </div>
 
-                    <div class="score-stats-item">
-                      <dt>1점</dt>
-                      <dd>
-                        <div class="bar-graph" arai-hidden>
-                          <div class="active-bar"></div>
+                            <div class="misc">
+                              <time datetime="2021-01-01">2021.01.01</time>
+                              <span>오늘의집 구매</span>
+                            </div>
+                          </div>
                         </div>
-                        <strong class="count" aria-label="0개">0</strong>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
+                      </header>
+
+                      <div class="review-card-body">
+                        <p>
+                          집 전체를 데운다기보다는 틀어놓고 앞에 앉아있으면
+                          따땃해지는 정도예요. 불 꺼놓고 난로 켜고 담요 덮은
+                          채로 커피 마시면 아주 좋아요. 고양이도 좋아해요
+                        </p>
+                      </div>
+
+                      <footer class="review-card-footer">
+                        <button class="btn-32 btn-outlined" type="button">
+                          도움이 돼요
+                        </button>
+                        <p>
+                          <strong><span>3</span>명</strong>에게 도움이
+                          되었습니다.
+                        </p>
+                      </footer>
+                    </article>
+                  </li>
+                </ol>
               </div>
-
-              <div class="product-section-divider sm-only" aria-hidden />
             </section>
           </div>
         </div>
