@@ -14,15 +14,27 @@
     border: 1px solid $border;
 
     &.page-prev {
+      width: 26px;
+      height: 26px;
+      padding: 6px;
       margin-right: 24px;
+
       .ic-chevron {
+        position: relative;
+        right: 1px;
         transform: rotate(90deg);
       }
     }
 
     &.page-next {
+      width: 26px;
+      height: 26px;
+      padding: 6px;
       margin-left: 24px;
+
       .ic-chevron {
+        position: relative;
+        left: 1px;
         transform: rotate(-90deg);
       }
     }
@@ -59,7 +71,7 @@
     button {
       @extend %page-item-base;
       min-width: 26px;
-      padding: 0 4px;
+      padding: 0 4px 2px;
 
       &:hover {
         color: $blue;
