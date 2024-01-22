@@ -697,8 +697,8 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="product-section-divider sm-only" aria-hidden />
             </section>
+            <div class="product-section-divider sm-only" aria-hidden></div>
 
             <section
               class="product-section product-review"
@@ -733,7 +733,10 @@
                         <dt>5점</dt>
                         <dd>
                           <div class="bar-graph" arai-hidden>
-                            <div class="active-bar"></div>
+                            <div
+                              class="active-bar"
+                              style="width: 82.5088339223%"
+                            ></div>
                           </div>
                           <strong class="count" aria-label="467개">467</strong>
                         </dd>
@@ -743,7 +746,10 @@
                         <dt>4점</dt>
                         <dd>
                           <div class="bar-graph" arai-hidden>
-                            <div class="active-bar"></div>
+                            <div
+                              class="active-bar"
+                              style="width: 15.371024735%"
+                            ></div>
                           </div>
                           <strong class="count" aria-label="87개">87</strong>
                         </dd>
@@ -753,7 +759,10 @@
                         <dt>3점</dt>
                         <dd>
                           <div class="bar-graph" arai-hidden>
-                            <div class="active-bar"></div>
+                            <div
+                              class="active-bar"
+                              style="width: 2.296819788%"
+                            ></div>
                           </div>
                           <strong class="count" aria-label="13개">13</strong>
                         </dd>
@@ -1060,8 +1069,46 @@
                     </article>
                   </li>
                 </ol>
+
+                <div class="pagination">
+                  <button class="page-control page-prev" type="button">
+                    <i class="ic-chevron"></i>
+                  </button>
+                  <ol class="page-list">
+                    <li class="page-item is-active"><a href="/">1</a></li>
+                    <li class="page-item"><a href="/">2</a></li>
+                    <li class="page-item"><a href="/">3</a></li>
+                    <li class="page-item"><a href="/">4</a></li>
+                    <li class="page-item"><a href="/">5</a></li>
+                  </ol>
+                  <button class="page-control page-next">
+                    <i class="ic-chevron"></i>
+                  </button>
+                </div>
               </div>
             </section>
+            <div class="product-section-divider sm-only" aria-hidden></div>
+
+            <!-- NOTE: 리뷰가 없을 경우 -->
+            <!-- <section
+              class="product-section product-review"
+              id="product-review"
+              role="tabpanel"
+            >
+              <header class="product-section-header">
+                <h1 class="title">리뷰</h1>
+                <strong class="badge" aria-label="0개">0</strong>
+                <a class="text-button" href="/">리뷰쓰기</a>
+              </header>
+
+              <div class="product-section-content">
+                <p class="review-empty">
+                  첫 리뷰를 남겨주세요! <br />
+                  최대 <strong>500P</strong>를 드립니다.
+                </p>
+              </div>
+            </section>
+            <div class="product-section-divider sm-only" aria-hidden></div> -->
           </div>
         </div>
       </div>
