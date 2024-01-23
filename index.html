@@ -1111,7 +1111,7 @@
             <div class="product-section-divider sm-only" aria-hidden></div> -->
 
             <section
-              class="product-section product-inquiry"
+              class="product-section product-inquiry is-open"
               role="tabpanel"
               id="product-inquiry"
             >
@@ -1119,6 +1119,14 @@
                 <h1 class="title">문의</h1>
                 <strong class="badge" aria-label="96개">96</strong>
                 <a class="text-button" href="/">문의하기</a>
+
+                <button
+                  class="icon-button sm-only"
+                  type="button"
+                  aria-label="더보기"
+                >
+                  <i class="ic-chevron" aria-hidden></i>
+                </button>
               </header>
 
               <div class="product-section-content">
@@ -1249,9 +1257,40 @@
                     </article>
                   </li>
                 </ol>
+
+                <div class="pagination">
+                  <ol class="page-list">
+                    <li class="page-item is-active"><a href="/">1</a></li>
+                    <li class="page-item"><a href="/">2</a></li>
+                    <li class="page-item"><a href="/">3</a></li>
+                    <li class="page-item"><a href="/">4</a></li>
+                    <li class="page-item"><a href="/">5</a></li>
+                  </ol>
+                  <button class="page-control page-next">
+                    <i class="ic-chevron"></i>
+                  </button>
+                </div>
               </div>
             </section>
             <div class="product-section-divider sm-only" aria-hidden></div>
+
+            <!-- NOTE: 문의 내역이 없을 경우
+            <section
+              class="product-section product-inquiry is-open"
+              id="product-inquiry"
+              role="tabpanel"
+            >
+              <header class="product-section-header">
+                <h1 class="title">문의</h1>
+                <strong class="badge" aria-label="0개">0</strong>
+                <a class="text-button" href="/">리뷰쓰기</a>
+              </header>
+
+              <div class="product-section-content">
+                <p class="inquiry-empty">문의 내역이 없습니다.</p>
+              </div>
+            </section>
+            <div class="product-section-divider sm-only" aria-hidden></div> -->
           </div>
         </div>
       </div>
