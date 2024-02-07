@@ -1,8 +1,7 @@
 .gnb {
-  $padding: 8px;
   position: relative;
-  border-bottom: 1px solid $border;
   background-color: $white;
+  border-bottom: 1px solid $border;
 
   &-wrapper {
     @include flexbox(between);
@@ -17,31 +16,11 @@
     .gnb-icon-button.is-search {
       margin-right: 4px;
     }
-
-    .gnb-auth {
-      margin-left: 8px;
-      a {
-        @include text-style(14, $secondary);
-        font-weight: 700;
-
-        &:first-child {
-          margin-right: 12px;
-        }
-
-        &:hover {
-          color: $blue;
-        }
-      }
-    }
-  }
-
-  &-wrapper {
-    height: 80px;
   }
 
   .logo {
     @include pos-center;
-    padding: $padding;
+
     a {
       display: block;
     }
@@ -71,13 +50,30 @@
         .gnb-icon-button {
           margin-right: 8px;
         }
+
+        .gnb-auth {
+          margin-left: 8px;
+
+          a {
+            @include text-style(14, $secondary);
+            font-weight: 700;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
       }
     }
 
     .logo {
-      position: static; //mobile absolute 해제
-      margin-right: 32px - ($padding * 2);
-      transform: none; //mobile transform 해제
+      position: static;
+      padding-right: 32px;
+      transform: none;
 
       img {
         height: 24px;
@@ -86,6 +82,7 @@
 
     .btn-primary {
       width: 88px;
+
       i {
         margin-left: 4px;
       }
@@ -94,8 +91,8 @@
 
   @include responsive(D) {
     &-search {
-      width: 264px;
       position: relative;
+      width: 264px;
       margin-right: 24px;
 
       .input-group {
@@ -103,16 +100,16 @@
       }
 
       .search-history {
-        width: 100%;
         position: absolute;
-        left: 0;
         top: calc(100% + 8px);
+        left: 0;
+        display: none;
+        width: 100%;
         padding: 16px 8px 8px;
+        background-color: $white;
         border: 1px solid $border;
         border-radius: 4px;
-        background-color: $white;
         box-shadow: $dropdown-shadow;
-        display: none;
 
         &.is-active {
           display: block;
@@ -120,7 +117,6 @@
 
         &-header {
           padding: 0 8px;
-          margin-top: 0;
         }
       }
     }
