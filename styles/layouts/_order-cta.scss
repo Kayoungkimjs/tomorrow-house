@@ -1,0 +1,43 @@
+.order-cta {
+  @include flexbox;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 4px;
+  height: $order-cta-height;
+  z-index: $order-cta-level;
+  background-color: $white;
+
+  .btn-ghost {
+    width: 72px;
+    height: auto;
+    margin-right: 4px;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    &.is-active {
+      i {
+        color: $blue;
+      }
+    }
+
+    i {
+      font-size: 24px;
+      color: $primary;
+    }
+
+    span {
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+      color: $secondary;
+    }
+  }
+
+  .btn-primary {
+    flex-grow: 1;
+  }
+}
