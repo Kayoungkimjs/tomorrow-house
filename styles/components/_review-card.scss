@@ -1,6 +1,5 @@
 .review-card {
   padding: 20px 0;
-  border-bottom: 1px soild $border;
 
   &-header {
     @include flexbox(start);
@@ -17,8 +16,6 @@
     }
 
     .username {
-      // display: inline-block;
-
       strong {
         @include text-style(13, $primary);
         font-weight: 400;
