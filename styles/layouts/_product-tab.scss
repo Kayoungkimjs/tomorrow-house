@@ -1,11 +1,11 @@
 .product-tab {
   position: sticky;
-  top: $gnb-height-sm + $lnb-height-sm;
+  top: $gnb-height-sm + $lnb-height-sm - 1px;
   width: 100%;
-  height: 40px;
+  height: $product-tab-sm;
   background-color: $white;
   border-bottom: 1px soild $blue;
-  z-index: $product-tap-level;
+  z-index: $product-tab-level;
 
   &-list {
     @include flexbox;
@@ -44,9 +44,10 @@
 
   @include responsive(T) {
     top: $gnb-height-md + $lnb-height-md;
-    height: 54px;
+    height: $product-tab-md;
     background-color: $background;
     border-bottom: 0;
+    margin: 40px 0;
 
     &-list {
       margin: 0;
