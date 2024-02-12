@@ -1,0 +1,54 @@
+.floating-order-form {
+  $global-header-height: $gnb-height-md + $lnb-height-md + $product-tab-md;
+
+  max-height: calc(100vh -#{$global-header-height});
+  min-height: calc(100vh -#{$global-header-height + $global-footer-height});
+  padding: 24px 0;
+  position: sticky;
+  top: $global-header-height;
+
+  > * {
+    width: 100%;
+  }
+
+  @include column-flexbox(start, start);
+
+  .order-inputs,
+  .order-summary,
+  .button-group {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .order-checkouts {
+    @include no-scrollbar;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .button-group {
+    .bookmark-button {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 55px;
+      border-radius: 4px;
+      border: 1px solid $border;
+      transition: background-color 200ms ease-in-out;
+
+      &.is-active {
+        i {
+          color: $blue;
+        }
+      }
+
+      &:hover {
+        background-color: $background;
+      }
+
+      i {
+        font-size: 32px;
+        color: $primary;
+      }
+    }
+  }
+}
