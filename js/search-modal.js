@@ -17,22 +17,12 @@ const searchHistoryContentList = searchModal.querySelector(
 const deleteHistoryItemButton =
   searchHistoryContentList.querySelectorAll('.delete-button')
 
-function openSearchModal() {
-  searchModal.classList.add('is-active')
-  searchOverlay.classList.add('is-active')
-}
-
-searchButton.addEventListener('click', openSearchModal)
-
-function closeSearchModal() {
-  searchModal.classList.remove('is-active')
-  searchOverlay.classList.remove('is-active')
-}
-
 function deleteAllSearchHistory() {
   searchHistoryContentList.innerHTML = ''
   searchHistoryContent.classList.add('no-content')
 }
+
+deleteAllHistoryButton.addEventListener('click', deleteAllSearchHistory)
 
 function deleteSearchHistoryItem(e) {
   e.stopPropagation()
@@ -45,8 +35,20 @@ function deleteSearchHistoryItem(e) {
   }
 }
 
-closeButton.addEventListener('click', closeSearchModal)
-deleteAllHistoryButton.addEventListener('click', deleteAllSearchHistory)
 deleteHistoryItemButton.forEach((button) => {
   button.addEventListener('click', deleteSearchHistoryItem)
 })
+
+function openSearchModal() {
+  searchModal.classList.add('is-active')
+  searchOverlay.classList.add('is-active')
+}
+
+searchButton.addEventListener('click', openSearchModal)
+
+function closeSearchModal() {
+  searchModal.classList.remove('is-active')
+  searchOverlay.classList.remove('is-active')
+}
+
+closeButton.addEventListener('click', closeSearchModal)
