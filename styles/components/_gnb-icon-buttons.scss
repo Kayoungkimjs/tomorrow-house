@@ -36,7 +36,7 @@
     padding: 0 4px;
     min-width: $badge-size;
     height: $badge-size;
-    border-radius: calc($badge-size / 2); //적당히 10000px 큰숫자 주면됨
+    border-radius: calc(#{$badge-size / 2}); //적당히 10000px 큰숫자 주면됨
     font-size: 10px;
     line-height: 16px;
     letter-spacing: -0.01em;

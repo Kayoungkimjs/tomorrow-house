@@ -14,7 +14,7 @@
 }
 
 @mixin mobile-only() {
-  @media screen and (max-width: calc($md-breakpoint - 1px)) {
+  @media screen and (max-width: calc(#{$md-breakpoint - 1px})) {
     @content;
   }
 }

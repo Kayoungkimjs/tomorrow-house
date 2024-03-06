@@ -70,7 +70,7 @@
     }
 
     .close-button {
-      left: calc((56px - $close-button-size) / 2);
+      left: calc((56px - #{$close-button-size}) / 2);
 
       i {
         font-size: 24px;
