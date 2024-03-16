@@ -69,7 +69,7 @@ function buildCss() {
       return
     }
 
-    postcss([autoprefixer, cssnano]) //js 사용해서 css 실행 /autoprefixer vendor prefixer 붙여줌(브라우저 호환성 위함), cssnano 플러그인
+    postcss([autoprefixer, cssnano])
       .process(css, { from: cssPath })
       .then((result) => {
         fs.writeFile(path.join(buildDir, 'main.css'), result.css, throwError)
@@ -106,10 +106,10 @@ async function build() {
   console.log('Start building...')
 
   // Create `build` directory
-  if (!fs.existsSync(buildDir)) fs.mkdirSync(buildDir) //build directory 생성, 없으면 만들어줘
+  if (!fs.existsSync(buildDir)) fs.mkdirSync(buildDir)
 
   // Build index.html & style.css
-  buildHtml() //index Html 실행
+  buildHtml()
   buildCss()
 
   // Copy js/*.js, assets/fonts/*, favicon files
